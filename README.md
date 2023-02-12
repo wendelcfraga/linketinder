@@ -1,1 +1,2 @@
-Projeto Linketinder Groovy.
+# Projeto Linketinder Groovy
+## MVP seguindo os requisitos mínimos estabelecidos no enunciado do projeto
