@@ -119,17 +119,21 @@ class Main {
     }
 
     def listarCandidatos() {
-        println "Candidatos cadastrados:"
-        candidatos.eachWithIndex { candidato, index ->
-            println "${index + 1}) ${candidato.nome}, ${candidato.email}, ${candidato.cpf}, ${candidato.idade}, ${candidato.estado}, ${candidato.cep}, ${candidato.descricaoPessoal}, competências: ${candidato.competencias}"
+        if (candidatos.isEmpty()) {
+            println "Não há candidatos cadastrados."
+        } else {
+            println "Lista de Candidatos:"
+            candidatos.each { println it.toString() }
         }
         println ""
     }
 
     def listarEmpresas() {
-        println "Empresas cadastradas:"
-        empresas.eachWithIndex { empresa, index ->
-            println "${index + 1}) ${empresa.nome}, ${empresa.emailCorporativo}, ${empresa.cnpj}, ${empresa.pais}, ${empresa.estado}, ${empresa.cep}, ${empresa.descricaoEmpresa}, competências desejadas: ${empresa.competencias}"
+        if (empresas.isEmpty()) {
+            println "Não há empresas cadastradas."
+        } else {
+            println "Lista de Empresas:"
+            empresas.each { println it.toString() }
         }
         println ""
     }

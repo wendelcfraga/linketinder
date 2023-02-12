@@ -1,8 +1,5 @@
 package modelos
 
-import groovy.transform.ToString
-
-@ToString
 class Empresa {
     String nome
     String emailCorporativo
@@ -12,5 +9,9 @@ class Empresa {
     int cep
     String descricaoEmpresa
     List<String> competencias
+
+    String toString() {
+        "Nome: ${nome}\nE-mail Corporativo: ${emailCorporativo}\nCNPJ: ${cnpj}\nPaís: ${pais}\nEstado: ${estado}\nCEP: ${cep}\nDescrição da Empresa: ${descricaoEmpresa}\nCompetências: ${competencias.join(', ')}\n"
+    }
 }
 
