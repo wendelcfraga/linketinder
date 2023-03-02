@@ -138,35 +138,36 @@ class Main {
         println ""
     }
 
-    def adicionarCandidato() {
-        println "Novo candidato:"
-        def nome = lerString("Nome")
-        def email = lerString("Email")
-        def cpf = lerString("CPF")
-        def idade = lerInt("Idade")
-        def estado = lerString("Estado")
-        def cep = lerInt("CEP")
-        def descricaoPessoal = lerString("Descrição pessoal")
-        def competencias = lerString("Competências (separadas por vírgula)").split(",")
+    def adicionarCandidato(nome = null, email = null, cpf = null, idade = null, estado = null, cep = null, descricaoPessoal = null, competencias = null) {
+        nome = nome ?: lerString("Nome")
+        email = email ?: lerString("Email")
+        cpf = cpf ?: lerString("CPF")
+        idade = idade ?: lerInt("Idade")
+        estado = estado ?: lerString("Estado")
+        cep = cep ?: lerInt("CEP")
+        descricaoPessoal = descricaoPessoal ?: lerString("Descrição pessoal")
+        competencias = competencias ?: lerString("Competências (separadas por vírgula)").split(",")
+
         candidatos << new Candidato(nome: nome, email: email, cpf: cpf, idade: idade, estado: estado, cep: cep, descricaoPessoal: descricaoPessoal, competencias: competencias)
         println "Candidato adicionado com sucesso."
         println ""
     }
 
-    def adicionarEmpresa() {
-        println "Nova empresa:"
-        def nome = lerString("Nome")
-        def emailCorporativo = lerString("Email corporativo")
-        def cnpj = lerString("CNPJ")
-        def pais = lerString("País")
-        def estado = lerString("Estado")
-        def cep = lerInt("CEP")
-        def descricaoEmpresa = lerString("Descrição da empresa")
-        def competencias = lerString("Competências desejadas (separadas por vírgula)").split(",")
+    def adicionarEmpresa(nome = null, emailCorporativo = null, cnpj = null, pais = null, estado = null, cep = null, descricaoEmpresa = null, competencias = null) {
+        nome = nome ?: lerString("Nome")
+        emailCorporativo = emailCorporativo ?: lerString("Email corporativo")
+        cnpj = cnpj ?: lerString("CNPJ")
+        pais = pais ?: lerString("País")
+        estado = estado ?: lerString("Estado")
+        cep = cep ?: lerInt("CEP")
+        descricaoEmpresa = descricaoEmpresa ?: lerString("Descrição da empresa")
+        competencias = competencias ?: lerString("Competências desejadas (separadas por vírgula)").split(",")
+
         empresas << new Empresa(nome: nome, emailCorporativo: emailCorporativo, cnpj: cnpj, pais: pais, estado: estado, cep: cep, descricaoEmpresa: descricaoEmpresa, competencias: competencias)
         println "Empresa adicionada com sucesso."
         println ""
     }
+
 
     def menu() {
         loopMenu:

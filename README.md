@@ -27,3 +27,4 @@ Siga as instruções exibidas no terminal para interagir com o programa.
 ## Autor
 
 Projeto desenvolvido por `Wendel Fraga`.
+[.gradle](..%2Ftestecompila%2F.gradle)
