@@ -3,7 +3,7 @@
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://github.com/wendelcfraga/linketinder)
 
-Um projeto simples em Groovy que simula um aplicativo de relacionamento entre empresas e candidatos. A aplicação permite cadastrar empresas e candidatos. É possível visualizar a lista de todas as empresas e candidatos cadastrados.
+Um projeto simples em Groovy que simula um aplicativo de relacionamento entre empresas e candidatos. A aplicação permite o cadastro de ambos. É possível visualizar a lista de todas as empresas e candidatos cadastrados.
 
 ## Como executar
 
